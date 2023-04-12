@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XXMOHAMED</title>
+    <!-- Normal File -->
+    <link rel="stylesheet" href="css/normal.css">
+    <!-- Style File -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome File -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Start Login Page  -->
+        <div class="login">
+            <div class="container">
+                <form method="POST" action="">
+                    <img src="login-avatar.png" alt="LOGIN">
+                    <h2>Welcome</h2>
+                    <div class="inputs">
+                        <div class="line">
+                            <div class="icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="in">
+                                <h3>Email</h3>
+                                <input type="email" class="input">
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="in">
+                                <h3>Password</h3>
+                                <input type="password" class="input">
+                                <a href="#">Forget Password?</a>
+                                <a href="register.html" class="s">sign Up</a>
+                            </div>
+                        </div>
+                        <input type="submit" class="log" value="Login" >
+                    </div>
+                </form>
+            </div>
+        </div>
+    <!-- End Login Page  -->
+    <script>
+        // Login Page 
+
+        let inputs = document.querySelectorAll(".input")
+
+        function focusFunc(){
+            let parent = this.parentNode.parentNode;
+            parent.classList.add('focus');
+        }
+
+        function blurFunc(){
+            let parent = this.parentNode.parentNode;
+            if (this.value == ""){
+                parent.classList.remove('focus');
+            }
+            
+        }
+
+        inputs.forEach( input => {
+            input.addEventListener("focus" , focusFunc)
+            input.addEventListener("blur" , blurFunc)
+        });
+    </script>
+</body>
+</html>
